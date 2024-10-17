@@ -9,33 +9,38 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f4f4f9; /* 整体背景色 */
             color: #333;
         }
         header {
-            background-color: #4CAF50;
+            background-image: url('background.jpg'); /* 替换为您的背景图片路径 */
             color: white;
             padding: 20px;
-            position: relative; /* 添加此行以允许绝对定位 */
+            position: relative;
             text-align: center;
+            background-size: cover; /* 让背景图片覆盖整个区域 */
+            background-position: center; /* 背景图片居中 */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
         }
         header h1 {
             margin: 0;
             font-size: 2.5em;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* 文字阴影 */
         }
         header img {
             position: absolute;
-            top: 30px; /* 距离顶部的距离 */
-            right: 30px; /* 距离右边的距离 */
-            width: 180px; /* 头像宽度 */
-            height: 200px; /* 头像高度 */
-            border-radius: 50%; /* 将图片变为圆形 */
-            border: 3px solid white; /* 添加白色边框 */
+            top: 30px;
+            right: 30px;
+            width: 180px;
+            height: 200px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 添加头像阴影 */
         }
         nav {
             display: flex;
             justify-content: center;
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.8); /* 半透明背景 */
         }
         nav a {
             color: white;
@@ -43,16 +48,19 @@
             text-decoration: none;
             text-align: center;
             font-size: 1.2em;
+            transition: background-color 0.3s, transform 0.3s; /* 添加过渡效果 */
         }
         nav a:hover {
             background-color: #4CAF50;
+            transform: scale(1.1); /* 悬停时放大 */
         }
         section {
             max-width: 1000px;
             margin: 40px auto;
             padding: 20px;
-            background-color: white;
+            background-color: white; /* 主体背景保持白色 */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px; /* 圆角 */
         }
         h2 {
             border-bottom: 2px solid #4CAF50;
@@ -67,6 +75,18 @@
             color: white;
             padding: 10px 0;
             text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* 顶部阴影 */
+        }
+        .contact-info a {
+            color: #006400； /* 超链接颜色 */
+            text-decoration: none; /* 去掉下划线 */
+            transition: color 0.3s; /* 添加过渡效果 */
+        }
+        .contact-info a:hover {
+            color: #333; /* 悬停时改变颜色 */
         }
     </style>
 </head>
@@ -91,15 +111,19 @@
     <!-- 个人简介 -->
     <section id="about">
         <h2>个人简介</h2>
-        <p>你好，我是闫妍，目前正在申请实习。我的兴趣包括前端开发、网页设计和数据分析。我喜欢学习新技术并应用到项目中，不断提升自己的能力。</p>
+        <p class="contact-info">
+            <li><strong>联系方式：</strong><a href="tel:19121980362">19121980362</a></li>
+            <li><strong>邮箱：</strong><a href="mailto:2024213441@stu.sufe.edu.cn">2024213441@stu.sufe.edu.cn</a></li>
+            <li><strong>实习意向：</strong>数据、产品方向</li>
+        </p>
     </section>
 
     <!-- 教育背景 -->
     <section id="education">
         <h2>教育背景</h2>
         <ul>
-            <li>2021-2024：XX大学，本科，计算机科学与技术</li>
-            <li>2020-2021：XX中学，高中</li>
+            <li><strong>2020.09-2024.07：上海财经大学 (本科)</strong>，统计学专业，综合绩点：3.35/4.0，主修课程：统计建模与决策(Python)（4.0/4.0）数据库（SQL）(3.7/4.0）回归分析（R语言）(3.3/4.0）</li>
+            <li><strong>2024.09-2026.07：上海财经大学 (硕士)</strong>，应用统计专业（数据科学与商务统计方向）</li>
         </ul>
     </section>
 
@@ -107,10 +131,17 @@
     <section id="internship">
         <h2>实习经历</h2>
         <ul>
-            <li><strong>公司名称：</strong> XX科技公司</li>
-            <li><strong>职位：</strong> 前端开发实习生</li>
-            <li><strong>时间：</strong> 2023年6月 - 2023年8月</li>
-            <li><strong>职责：</strong> 参与公司内部管理系统的前端开发，使用 HTML、CSS、JavaScript 和 React.js 完成模块设计与实现。</li>
+            <li><strong>公司名称：</strong>小红书
+                <strong>职位：</strong>创作者商业服务组数据运营</li>
+            <li><strong>时间：</strong>2024.04-2024.07</li>
+            <li><strong>数据分析能力：</strong>负责达人商业化投流数据分析工作，使用RedBI进行数据提取、验证、分析，完成P0层级38位达人的ONE Page数据复盘及日常投流复盘，并负责参与每周周报、每月月报撰写工作；使用SQL语言协助搭建RedBI数据看板；使用爬虫及鼠标宏完成淘宝数据爬取及达人联系方式汇总。</li>
+            <li><strong>沟通交流能力：</strong>在职期间与5家MCN机构实现KO冷启，实地走访美ONE、星茹传媒等MCN公司并与其达成良好合作关系，日常对接达人运营，提供实时投流策略指导，在职期间618投流金额同比增长9倍。</li>
+        </ul>
+        <ul>
+            <li><strong>公司名称：</strong>联创资本行研
+                <strong>职位：</strong>行研实习生</li>
+            <li><strong>时间：</strong>2024.04-2024.07</li>
+            <li><strong>挖掘处理数据能力：</strong>研究AR/VR及EDA行业，分析约30家头部公司经营模式，测算行业规模，对潜在被投公司进行数据处理、提取并制作数据报表，协助完成AI、MES领域研究报告撰写，即数据报表处理工作；完成pico公司以及西格数据的竞品分析专题研究；参与对内客户策略报告的讨论与撰写工作；使用BI工具tableau制作仪表盘对源数据进行可视化操作；日常使用wind进行数据收集整理并负责参与每周周报、每月月报撰写工作，利用SQL、wind、R等软件实现数据收集、数据分析。</li>
         </ul>
     </section>
 
@@ -118,27 +149,32 @@
     <section id="projects">
         <h2>实践经历</h2>
         <ul>
-            <li><strong>项目名称：</strong> XX大学生网站</li>
-            <li><strong>描述：</strong> 设计并开发了一个面向大学生的资源分享平台，使用 HTML5、CSS3 和 JavaScript，提升了平台的用户交互体验。</li>
-            <li><strong>项目名称：</strong> 数据分析项目</li>
-            <li><strong>描述：</strong> 利用 Python 和 Pandas 进行数据清洗和分析，生成详细的可视化报告，帮助企业优化其营销策略。</li>
+            <li><strong>项目名称：</strong>“正大杯”市场调研全国三等奖</li>
+            <li><strong>描述：</strong>编写爬虫程序爬取好大夫线上诊疗平台网页，爬取获得26万条医生数据、240万条病例信息和201万条订单信息。编撰并发放问卷，收取得到513份有效问卷进行数据分析。利用获取所得信息对我国互联网诊疗平台存在问题进行剖析，提供可行的解决方案。</li>
+            <li><strong>项目名称：</strong>大学生数学建模竞赛上海市二等奖</li>
+            <li><strong>描述：</strong>编写matlab语言，建立Topsis模型分析企业订购和运输，获上海市二等奖。3天内高效学习模型假设条件、基本步骤、检验方法，快速转化知识，应用实践。完成20页论文排版撰写工作，熟练掌握word文章撰写</li>
+
+            <li><strong>项目名称：</strong>大学生创新创业训练国家级优秀项目</li>
+            <li><strong>描述：</strong>编写爬虫爬取1800条豆瓣电影用户数据，建立聚类模型将豆瓣电影用户分类处理，建立情感分析模型分析用户评论，刻画各类用户的观影特征，给出影响电影播放量的主要因素。完成6000字中期报告的编辑和排版工作，排版整洁、美观、严谨清晰。</li>
+            <li><strong>项目名称：</strong>“挑战杯”上海市特等奖</li>
+            <li><strong>描述：</strong>采用逐步回归及结构方程技术，加工收集问卷数据，具体定量化地对于在线诊疗用户及潜在用户进行建模分析，从理论模型的角度探究影响用户对线上诊疗使用意愿，检验可靠性。</li>
         </ul>
     </section>
 
-    <!-- 工具使用 -->
-    <section id="skills">
-        <h2>工具使用</h2>
+   
+<section id="skills">
+ <h2>技能掌握</h2>
         <ul>
-            <li><strong>编程语言：</strong> HTML, CSS, JavaScript, Python</li>
-            <li><strong>框架和库：</strong> React.js, Bootstrap</li>
-            <li><strong>开发工具：</strong> Visual Studio Code, Git</li>
-            <li><strong>设计工具：</strong> Figma, Adobe Photoshop</li>
+            <li><strong>数据分析工具：</strong> PYTHON, R, SQL, MATLAB</li>
+            <li><strong>OFFICE工具：</strong>EXCEL,PPT,WORD</li>
+            <li><strong>英语能力：</strong> 6级590，雅思6.5，能进行日常英语交流写作</li>
+            <li><strong>设计工具：</strong>BI tableau, Adobe Photoshop</li>
         </ul>
     </section>
 
     <!-- 页脚 -->
     <footer>
-        <p>© 2024 闫妍. 版权所有。</p>
+        <p>© 2024 闫妍个人. 版权所有。</p>
     </footer>
 
 </body>
