@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闫妍的个人主页</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            position: relative; /* 添加此行以允许绝对定位 */
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header img {
+            position: absolute;
+            top: 30px; /* 距离顶部的距离 */
+            right: 30px; /* 距离右边的距离 */
+            width: 180px; /* 头像宽度 */
+            height: 200px; /* 头像高度 */
+            border-radius: 50%; /* 将图片变为圆形 */
+            border: 3px solid white; /* 添加白色边框 */
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            background-color: #4CAF50;
+        }
+        section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        p, li {
+            line-height: 1.8;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 头部 -->
+    <header>
+        <h1>闫妍的个人主页</h1>
+        <!-- 在右上角插入头像图片 -->
+        <img src="yanyan.jpg" alt="闫妍的头像">
+    </header>
+
+    <!-- 导航栏 -->
+    <nav>
+        <a href="#about">个人简介</a>
+        <a href="#education">教育背景</a>
+        <a href="#internship">实习经历</a>
+        <a href="#projects">实践经历</a>
+        <a href="#skills">工具使用</a>
+    </nav>
+
+    <!-- 个人简介 -->
+    <section id="about">
+        <h2>个人简介</h2>
+        <p>你好，我是闫妍，目前正在申请实习。我的兴趣包括前端开发、网页设计和数据分析。我喜欢学习新技术并应用到项目中，不断提升自己的能力。</p>
+    </section>
+
+    <!-- 教育背景 -->
+    <section id="education">
+        <h2>教育背景</h2>
+        <ul>
+            <li>2021-2024：XX大学，本科，计算机科学与技术</li>
+            <li>2020-2021：XX中学，高中</li>
+        </ul>
+    </section>
+
+    <!-- 实习经历 -->
+    <section id="internship">
+        <h2>实习经历</h2>
+        <ul>
+            <li><strong>公司名称：</strong> XX科技公司</li>
+            <li><strong>职位：</strong> 前端开发实习生</li>
+            <li><strong>时间：</strong> 2023年6月 - 2023年8月</li>
+            <li><strong>职责：</strong> 参与公司内部管理系统的前端开发，使用 HTML、CSS、JavaScript 和 React.js 完成模块设计与实现。</li>
+        </ul>
+    </section>
+
+    <!-- 实践经历 -->
+    <section id="projects">
+        <h2>实践经历</h2>
+        <ul>
+            <li><strong>项目名称：</strong> XX大学生网站</li>
+            <li><strong>描述：</strong> 设计并开发了一个面向大学生的资源分享平台，使用 HTML5、CSS3 和 JavaScript，提升了平台的用户交互体验。</li>
+            <li><strong>项目名称：</strong> 数据分析项目</li>
+            <li><strong>描述：</strong> 利用 Python 和 Pandas 进行数据清洗和分析，生成详细的可视化报告，帮助企业优化其营销策略。</li>
+        </ul>
+    </section>
+
+    <!-- 工具使用 -->
+    <section id="skills">
+        <h2>工具使用</h2>
+        <ul>
+            <li><strong>编程语言：</strong> HTML, CSS, JavaScript, Python</li>
+            <li><strong>框架和库：</strong> React.js, Bootstrap</li>
+            <li><strong>开发工具：</strong> Visual Studio Code, Git</li>
+            <li><strong>设计工具：</strong> Figma, Adobe Photoshop</li>
+        </ul>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2024 闫妍. 版权所有。</p>
+    </footer>
+
+</body>
+</html>
